@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WebSocket Chat</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+
+    <!-- SockJS + STOMP (qua WebJars) -->
+    <script src="/webjars/sockjs-client/1.5.1/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/2.3.4/stomp.min.js"></script>
+</head>
+<body>
+<main class="container">
+    <header class="header">
+        <h1>💬 WebSocket Chat</h1>
+        <div class="status">
+            Trạng thái: <span id="status" class="badge badge--disconnected">Disconnected</span>
+        </div>
+    </header>
+
+    <section class="identity">
+        <label for="name">Tên của bạn</label>
+        <div class="row">
+            <input id="name" type="text" placeholder="Ví dụ: Alice" />
+            <button id="connectBtn" class="btn">Kết nối</button>
+            <button id="disconnectBtn" class="btn btn--secondary" disabled>Ngắt</button>
+        </div>
+    </section>
+
+    <section class="chat">
+        <div id="chat" class="chat-box" aria-live="polite" aria-atomic="false"></div>
+
+        <form id="form" class="composer" autocomplete="off">
+            <input id="message" type="text" placeholder="Nhập tin nhắn và nhấn Enter..." />
+            <button id="sendBtn" class="btn" type="submit" disabled>Gửi</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <small>Kênh: <code>/topic/public</code> • Gửi tới: <code>/app/chat.sendMessage</code></small>
+    </footer>
+</main>
+
+<script src="/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+/* ---------- Reset cơ bản ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    padding: 20px;
+}
+
+/* ---------- Container ---------- */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+/* ---------- Header ---------- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.header h1 {
+    font-size: 22px;
+    color: #444;
+}
+
+.status {
+    font-size: 14px;
+}
+
+.badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.badge--connected {
+    background-color: #e0f7e9;
+    color: #2e7d32;
+}
+
+.badge--disconnected {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+/* ---------- Identity section ---------- */
+.identity {
+    margin-bottom: 15px;
+}
+
+.identity label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.btn {
+    padding: 10px 14px;
+    border: none;
+    background-color: #1976d2;
+    color: white;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn--secondary {
+    background-color: #777;
+}
+
+/* ---------- Chat box ---------- */
+.chat {
+    margin-bottom: 15px;
+}
+
+.chat-box {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fafafa;
+    height: 350px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.message {
+    background: #e3f2fd;
+    border-radius: 6px;
+    padding: 8px;
+    margin-bottom: 8px;
+}
+
+.message .meta {
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 4px;
+}
+
+.message .from {
+    font-weight: bold;
+    color: #1976d2;
+}
+
+.message .content {
+    font-size: 14px;
+}
+
+/* ---------- Form gửi tin ---------- */
+.composer {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.composer input[type="text"] {
+    flex: 1;
+}
+
+.footer {
+    text-align: right;
+    font-size: 12px;
+    color: #666;
+    margin-top: 10px;
+}
